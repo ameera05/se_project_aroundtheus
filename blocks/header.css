@@ -2,11 +2,11 @@
   margin-top: 45px;
   width: 120px;
   height: 120px;
+  max-width: 880px;
 }
 
 @media screen and (max-width: 620px) {
   .header {
-    margin-top: 28px;
-    width: 100%;
+    margin: 0;
   }
 }

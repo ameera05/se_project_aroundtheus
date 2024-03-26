@@ -15,12 +15,14 @@
 .card__title {
   max-width: 220px;
   font-weight: 900;
-  line-height: 29px;
+  line-height: 1.21;
+  font-size: 24px;
   font-family: "Inter", Arial, sans-serif;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -28,6 +30,7 @@
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 51px;
 }
 
 .card__like-button {
@@ -35,4 +38,10 @@
   height: 18px;
   width: 21px;
   border-style: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
 }
