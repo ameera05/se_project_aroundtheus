@@ -12,3 +12,12 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+@media screen and (max-width: 615px) {
+  .footer__copyright {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
