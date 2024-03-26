@@ -30,7 +30,6 @@
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: 51px;
 }
 
 .card__like-button {
@@ -44,4 +43,8 @@
 
 .card__like-button:hover {
   opacity: 0.5;
+}
+
+.card:first-child {
+  margin-top: 36px;
 }
