@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   align-items: center;
-  padding-top: 40px;
 }
 
 .profile__info {
@@ -77,6 +76,7 @@
   object-fit: cover;
   background-position: center;
   margin-right: 24px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
