@@ -1,8 +1,11 @@
 .header {
-  padding-top: 45px;
+  padding: 45px 0 36px 0;
   width: 120px;
-  height: 120px;
   max-width: 880px;
+  border-bottom-color: rgba(84, 84, 84, 0.7);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 620px) {
