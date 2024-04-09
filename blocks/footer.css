@@ -14,20 +14,14 @@
   margin: 0;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (min-width: 621px) and (max-width: 879px) {
   .footer {
-    padding: 0 19px;
-    width: 619px;
-  }
-
-  .footer__copyright {
-    font-size: 14px;
+    width: 581px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 620px) {
   .footer {
-    padding: 0 auto;
     width: 282px;
   }
 }
