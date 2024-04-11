@@ -36,7 +36,7 @@
   cursor: pointer;
   box-sizing: border-box;
   transition: opacity 0.1s ease;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .profile__add-button:hover {
@@ -46,7 +46,6 @@
 .profile__title {
   font-size: 42px;
   font-family: "Inter", Arial, Sans-serif;
-  font-weight: 500;
   line-height: 1.14;
   grid-area: title;
   margin: 0;
@@ -101,6 +100,10 @@
     justify-content: center;
     width: 100%;
     margin: 0;
+  }
+
+  .profile__image {
+    margin: 42px 0;
   }
 
   .profile__title {

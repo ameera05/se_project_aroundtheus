@@ -17,11 +17,17 @@
 @media screen and (min-width: 621px) and (max-width: 879px) {
   .footer {
     width: 581px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Inter", Arial, Sans-Serif;
   }
 }
 
 @media screen and (max-width: 620px) {
   .footer {
     width: 282px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Inter", Arial, Sans-Serif;
   }
 }
