@@ -1,5 +1,5 @@
-#The Project overview:
-##This project is a responsive webpage where all elements are displayed correctly on various screen sizes using HTML/CSS with new techniques on positioning.
+#The Project overview:  
+ ##This project is a responsive webpage where all elements are displayed correctly on various screen sizes using HTML/CSS with new techniques on positioning.
 
 #Intro
 ##This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
