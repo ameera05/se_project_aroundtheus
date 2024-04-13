@@ -111,7 +111,6 @@
   .profile__title {
     text-align: center;
     font-size: 22px;
-    font-weight: 500;
     line-height: 1.2;
   }
 
@@ -121,7 +120,6 @@
     font-size: 14px;
     padding-top: 14px;
     padding-bottom: 36px;
-    line-height: 1.2;
   }
 
   .profile__add-button {
