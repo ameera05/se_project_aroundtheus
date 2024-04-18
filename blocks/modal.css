@@ -10,11 +10,12 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 0 19px;
+  display: none;
 }
 
-/*.modal_opened {
+.modal_opened {
   display: flex;
-}*/
+}
 
 .modal__container {
   position: relative;
