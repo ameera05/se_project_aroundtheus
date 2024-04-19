@@ -115,6 +115,7 @@
           <input
             type="text"
             name="title"
+            id="profile-title-input"
             class="modal__input"
             placeholder="Name"
             required
@@ -122,6 +123,7 @@
           <input
             type="text"
             name="description"
+            id="profile-description-input"
             class="modal__input"
             placeholder="Description"
             required
@@ -130,6 +132,15 @@
         </form>
       </div>
     </div>
+    <template id="card-template">
+      <li class="card">
+        <img src="" class="card__image" alt="" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
     <script src="scripts/index.js"></script>
   </body>
 </html>
