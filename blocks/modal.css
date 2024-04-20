@@ -101,6 +101,9 @@
     left: calc(100% - 28px);
   }
   .modal__container {
+    max-width: 282px;
+    top: 123px;
+    padding: 25px 22px;
   }
 
   .modal__input {
@@ -111,5 +114,6 @@
   .modal__button {
     width: 100%;
     font-size: 14px;
+    text-align: center;
   }
 }
