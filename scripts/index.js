@@ -78,6 +78,5 @@ modalCloseBtn.addEventListener("click", closePopup);
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
 initialCards.forEach((cardData) => {
-  const cardElement = getCardElement(cardData);
-  cardlistEl.prepend(cardElement);
+  cardlistEl.prepend(getCardElement(cardData));
 });
