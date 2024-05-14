@@ -87,8 +87,8 @@ function handleProfileEditSubmit(e) {
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 profileEditBtn.addEventListener("click", () => {
-  nameInput.value = profileTitle.textContent;
-  jobInput.value = profileDescription.textContent;
+  profileTitle.textContent = profileTitleInput.value;
+  profileDescription.textContent = profileDescriptionInput.value;
   openModal(profileEditModal);
 });
 
