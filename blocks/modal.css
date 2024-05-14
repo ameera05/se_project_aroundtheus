@@ -88,7 +88,6 @@
 .modal__image {
   max-width: 75vw;
   max-height: 75vh;
-  z-index: 3;
 }
 .modal__image-label {
   position: absolute;
@@ -131,5 +130,9 @@
     width: 100%;
     font-size: 14px;
     text-align: center;
+  }
+
+  .modal__image {
+    max-width: 282px;
   }
 }
