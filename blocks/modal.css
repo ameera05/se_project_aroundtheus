@@ -85,6 +85,22 @@
   opacity: 0.8;
 }
 
+.modal__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  z-index: 3;
+}
+.modal__image-label {
+  position: absolute;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  bottom: -33px;
+  left: 0px;
+  color: rgba(255, 255, 255, 1);
+}
+
 @media screen and (max-width: 630px) {
   .modal__form {
     width: 238px;
