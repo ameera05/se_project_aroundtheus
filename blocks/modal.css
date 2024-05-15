@@ -100,6 +100,10 @@
   color: rgba(255, 255, 255, 1);
 }
 
+.modal__container-image {
+  background: transparent;
+}
+
 @media screen and (max-width: 630px) {
   .modal__form {
     width: 238px;
@@ -134,5 +138,14 @@
 
   .modal__image {
     max-width: 282px;
+  }
+
+  .modal__image-label {
+    margin: 0;
+  }
+  .modal__container-image {
+    padding: 0px;
+    width: 240px;
+    display: flex;
   }
 }
