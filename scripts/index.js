@@ -141,7 +141,7 @@ profileModalCloseBtn.addEventListener("click", () =>
 );
 
 previewModalCloseBtn.addEventListener("click", () =>
-  closeModal(previewImageElement)
+  closeModal(previewImageModal)
 );
 // add new card button
 addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
