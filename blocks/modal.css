@@ -45,6 +45,10 @@
   color: #fff;
 }
 
+.modal__close:hover {
+  opacity: 0.6;
+}
+
 .modal__heading {
   font-family: "Inter", Arial, Sans-Serif;
   font-weight: 900;
@@ -56,7 +60,7 @@
 .modal__form {
   display: flex;
   flex-direction: column;
-  max-width: 430px;
+  width: 430px;
 }
 
 .modal__input {
