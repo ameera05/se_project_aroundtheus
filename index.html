@@ -40,7 +40,7 @@
         <p class="footer__copyright">&#169; 2022 Around The U.S.</p>
       </footer>
     </div>
-    <!--Edit modal-->
+    <!--Edit profile modal-->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="profile-edit-modal-close"></button>
@@ -50,20 +50,18 @@
             type="text"
             name="title"
             id="profile-title-input"
-            class="modal__input"
+            class="modal__input modal__input_type_title"
             placeholder="Name"
             maxlength="40"
             minlength="2"
             required
           />
-          <span class="modal__error" id="profile-title-error"
-            >Error message</span
-          >
+          <span class="modal__error" id="profile-title-error"></span>
           <input
             type="text"
             name="description"
             id="profile-description-input"
-            class="modal__input"
+            class="modal__input modal__input_type_description"
             placeholder="About me"
             maxlength="200"
             minlength="2"
@@ -91,16 +89,20 @@
             class="modal__input modal__input_type_title"
             placeholder="Title"
             type="text"
+            minlength="1"
+            maxlength="30"
             required
           />
+          <span class="modal__error" id="profile-title-input-error"></span>
           <input
-            type="text"
+            type="url"
             name="url"
-            id="profile-description-input"
+            id="card-link"
             class="modal__input modal__input_type_url"
             placeholder="Image URL"
             required
           />
+          <span class="modal__error" id="card-link-error"></span>
           <button
             class="modal__button modal__button_disabled"
             type="submit"
@@ -111,10 +113,11 @@
         </form>
       </div>
     </div>
+    <!----preview modal-->
     <div class="modal" id="preview-image-modal">
       <div class="modal__container modal__container-image">
         <button
-          class="modal__close"
+          class="modal__close modal__close_preview"
           id="preview-image-close-button"
           type="button"
         ></button>
@@ -127,8 +130,16 @@
         <img src="" class="card__image" alt="" />
         <div class="card__description">
           <h2 class="card__title"></h2>
-          <button class="card__like-button" type="button"></button>
-          <button class="card__delete-button" type="button"></button>
+          <button
+            class="card__like-button"
+            type="button"
+            id="like-button"
+          ></button>
+          <button
+            class="card__delete-button"
+            type="button"
+            id="delete-button"
+          ></button>
         </div>
       </li>
     </template>
