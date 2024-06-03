@@ -122,6 +122,20 @@
   position: absolute;
 }
 
+.modal__button_disabled {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal__button_disabled:hover {
+  opacity: 100%;
+}
+
+.modal__label {
+  position: relative;
+  width: 100%;
+}
 @media screen and (max-width: 630px) {
   .modal__form {
     width: 238px;
