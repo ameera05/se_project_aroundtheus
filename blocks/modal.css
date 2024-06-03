@@ -76,6 +76,12 @@
   margin-bottom: 48px;
 }
 
+.modal__input-error {
+  border-bottom: red;
+  border-style: solid;
+  border-width: 1px;
+}
+
 .modal__button {
   background-color: #000;
   color: #fff;
