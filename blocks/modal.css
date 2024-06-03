@@ -166,4 +166,14 @@
     width: 240px;
     display: flex;
   }
+
+  .modal__error {
+    position: absolute;
+    width: 250px;
+    margin-top: -50px;
+  }
+
+  .modal__error:last-of-type {
+    margin-top: -50px;
+  }
 }
