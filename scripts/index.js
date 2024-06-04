@@ -136,16 +136,6 @@ function handleProfileAddSubmit(e) {
   closeModal(profileAddModal);
 }
 
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", handleEscClose);
-}
-
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-  document.addEventListener("keydown", handleEscClose);
-}
-
 function handleEscClose(e) {
   if (event.key === "Escape")
     document.querySelectorAll(".modal.modal_opened").forEach(closeModal);
@@ -165,19 +155,11 @@ profileEditBtn.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-profileModalCloseBtn.addEventListener("click", () =>
-  closeModal(profileEditModal)
-);
-
 previewModalCloseBtn.addEventListener("click", () =>
   closeModal(previewImageModal)
 );
 // add new card button
 addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
-
-profileAddModalCloseBtn.addEventListener("click", () =>
-  closeModal(profileAddModal)
-);
 
 //close modal
 modals.forEach((modal) => {
