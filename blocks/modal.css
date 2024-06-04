@@ -127,6 +127,7 @@
   margin-top: -43px;
   width: 358px;
   position: absolute;
+  font-family: Inter, Arial, Arial, Helvetica, sans-serif;
 }
 
 .modal__button_disabled {
@@ -136,7 +137,7 @@
 }
 
 .modal__button_disabled:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__label {
