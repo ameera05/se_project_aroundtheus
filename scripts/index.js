@@ -39,9 +39,6 @@ const modalContainer = document.querySelector(".modal__container");
 //edit profile
 const profileEditBtn = document.querySelector("#profile__edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
-const profileModalCloseBtn = profileEditModal.querySelector(
-  "#profile-edit-modal-close"
-);
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
@@ -52,9 +49,6 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 
 //add card
 const profileAddModal = document.querySelector("#profile-add-modal");
-const profileAddModalCloseBtn = profileAddModal.querySelector(
-  "#profile-add-modal-close"
-);
 const addCardFormElement = profileAddModal.querySelector(".modal__form");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const cardTitleInput = addCardFormElement.querySelector(
