@@ -132,7 +132,7 @@ function handleProfileAddSubmit(e) {
 }
 
 function handleEscClose(e) {
-  if (event.key === "Escape")
+  if (e.key === "Escape")
     document.querySelectorAll(".modal.modal_opened").forEach(closeModal);
 }
 
@@ -150,9 +150,6 @@ profileEditBtn.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-previewModalCloseBtn.addEventListener("click", () =>
-  closeModal(previewImageModal)
-);
 // add new card button
 addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
 
