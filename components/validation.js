@@ -1,3 +1,4 @@
+/*
 function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.add(inputErrorClass);
@@ -67,3 +68,4 @@ const config = {
 };
 
 enableValidation(config);
+*/
