@@ -1,6 +1,15 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 
+const config = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: ".modal__error",
+};
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -87,6 +96,19 @@ function closeModal(modal) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscClose);
+}
+
+function handleImageClick(cardData) {
+  openModal(previewImageElement);
+  previewImageElement.src = cardData.link;
+  previewImageElement.alt = cardData.name;
+  previewImageLabel.textContent = cardData.name;
+}
+
+function createCard(cardData) {
+  const card = new Card(cardData, "#card-template", handleImageClick);
+  const cardElement = card.getView();
+  return cardElement;
 }
 
 function renderCard(cardData, wrapper) {

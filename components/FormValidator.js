@@ -30,7 +30,7 @@ export default class FormValidator {
     this._hideInputError(inputEl);
   }
 
-  _hasInvalidInput(inputList) {
+  _hasInvalidInput() {
     return !this._inputList.every((inputEl) => inputEl.validity.valid);
   }
 
