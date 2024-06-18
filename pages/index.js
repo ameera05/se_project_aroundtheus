@@ -196,3 +196,6 @@ modals.forEach((modal) => {
 });
 
 initialCards.forEach((cardData) => renderCard(cardData, cardlistEl));
+
+const addCardFormValidator = new FormValidator(config, addCardFormElement);
+addCardFormValidator.enableValidation();
