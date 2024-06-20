@@ -96,7 +96,7 @@ function openModal(modal) {
 }
 
 function handleImageClick(cardData) {
-  openModal(previewImageElement);
+  openModal(previewImageModal);
   previewImageElement.src = cardData.link;
   previewImageElement.alt = cardData.name;
   previewImageLabel.textContent = cardData.name;

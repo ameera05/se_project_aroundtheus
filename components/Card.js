@@ -18,6 +18,10 @@ export default class Card {
       });
 
     this._cardImageEl.addEventListener("click", () => {
+      const data = {
+        name: this._name,
+        link: this._link,
+      };
       this._handleImageClick(data);
     });
   }
