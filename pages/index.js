@@ -112,7 +112,7 @@ function createCard(cardData) {
 }
 
 function renderCard(cardData, wrapper) {
-  const cardElement = getCardElement(cardData);
+  const cardElement = createCard(cardData);
   wrapper.prepend(cardElement);
 }
 
@@ -199,3 +199,6 @@ initialCards.forEach((cardData) => renderCard(cardData, cardlistEl));
 
 const addCardFormValidator = new FormValidator(config, addCardFormElement);
 addCardFormValidator.enableValidation();
+
+const profileFormValidator = new FormValidator(config, profileEditForm);
+profileFormValidator.enableValidation();
