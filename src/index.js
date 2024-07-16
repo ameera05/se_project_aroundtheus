@@ -1,4 +1,4 @@
-import "..src/pages/index.css";
+import "./pages/index.css";
 import { initialCards, config } from "../src/utils/constants.js";
 import Card from "../src/components/Card.js";
 import FormValidator from "../src/components/FormValidator.js";
@@ -137,9 +137,3 @@ addCardFormValidator.enableValidation();
 
 const profileFormValidator = new FormValidator(config, profileEditForm);
 profileFormValidator.enableValidation();
-
-const numbers = [2, 3, 5];
-
-const doubledNumbers = numbers.map((number) => number * 2);
-
-console.log(doubledNumbers); // 4, 6, 10

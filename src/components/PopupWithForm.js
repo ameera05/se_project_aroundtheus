@@ -7,15 +7,22 @@ export default class PopupWithForm extends Popup {
     this._handleFormSubmit = handleFormSubmit;
     this._inputList = [...this._popupForm.querySelectorAll(".modal__input")];
   }
+
+  _getInputValues() {
+    const formValues = {};
+    this._inputList.forEach((inputEl) => {
+      formValues[inputEl.name] = inputEl.value;
+    });
+    return formValues;
+  }
+
+  setEventListeners() {
+    super.setEventListeners();
+
+    this._popupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      this._handleFormSubmit(this._getInputValues());
+      this._popupForm.reset();
+    });
+  }
 }
-
-// close() {
-// this._popupForm.reset();
-//super.close();
-// }
-//}
-
-//const newCardPopup = new PopupWithForm("#profile-add-modal", () => {});
-//newCardPopup.open();
-
-//newCardPopup.close();
