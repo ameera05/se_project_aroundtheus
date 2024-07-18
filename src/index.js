@@ -137,3 +137,28 @@ addCardFormValidator.enableValidation();
 
 const profileFormValidator = new FormValidator(config, profileEditForm);
 profileFormValidator.enableValidation();
+
+const editProfilePopup = new PopupWithForm(
+  "#profile-edit-modal",
+  handleProfileEditSubmit
+);
+editProfilePopup.setEventListeners();
+
+const previewImagePopup = new PopupWithImage("#preview-image-modal");
+previewImagePopup.setEventListeners();
+
+const section = new Section(
+  {
+    item: initialCards,
+    renderer: (item) => {
+      section.addItem(createCard(item));
+    },
+  },
+  cardListElement
+);
+section.renderItems();
+
+const user = new UserInfo({
+  name: ".profile__title",
+  description: ".profile__description",
+});

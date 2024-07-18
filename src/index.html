@@ -13,14 +13,18 @@
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./images/ATWlogo.svg"
+          src="<%=require('./images/ATWlogo.svg')%>"
           alt="Around the U.S. logo"
           class="header__logo"
         />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img src="./images/Avatar.png" alt="Avatar" class="profile__image" />
+          <img
+            src="<%=require('./images/Avatar.png')%>"
+            alt="Avatar"
+            class="profile__image"
+          />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
@@ -150,6 +154,6 @@
         </div>
       </li>
     </template>
-    <script src="pages/index.js" defer type="module"></script>
+    <script src="./src/index.js" defer type="module"></script>
   </body>
 </html>
