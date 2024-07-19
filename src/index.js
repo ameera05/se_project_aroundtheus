@@ -84,7 +84,6 @@ function renderCard(cardData, wrapper) {
 /* -------------------------------------------------------------------------- */
 
 function handleProfileEditSubmit(e) {
-  e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   closeModal(profileEditModal);
