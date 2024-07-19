@@ -138,15 +138,24 @@ addCardFormValidator.enableValidation();
 const profileFormValidator = new FormValidator(config, profileEditForm);
 profileFormValidator.enableValidation();
 
+//add card popup
+const newCardPopup = new PopupWithForm(
+  "#profile-add-modal",
+  handleProfileAddSubmit
+);
+
+//edit profile popup
 const editProfilePopup = new PopupWithForm(
   "#profile-edit-modal",
   handleProfileEditSubmit
 );
 editProfilePopup.setEventListeners();
 
+//preview image popup
 const previewImagePopup = new PopupWithImage("#preview-image-modal");
 previewImagePopup.setEventListeners();
 
+//Section
 const section = new Section(
   {
     item: initialCards,
@@ -154,11 +163,16 @@ const section = new Section(
       section.addItem(createCard(item));
     },
   },
-  cardListElement
+  cardlistEl
 );
 section.renderItems();
 
+//Userinfo
 const user = new UserInfo({
   name: ".profile__title",
   description: ".profile__description",
 });
+
+export function multiply(a, b) {
+  return a * b;
+}
