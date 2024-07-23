@@ -121,13 +121,6 @@ profileEditBtn.addEventListener("click", () => {
 addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
 
 //close modal
-modals.forEach((modal) => {
-  modal.addEventListener("mousedown", (e) => {
-    if (e.target === modal || e.target.classList.contains("modal__close")) {
-      closeModal(modal);
-    }
-  });
-});
 
 initialCards.forEach((cardData) => renderCard(cardData, cardlistEl));
 
