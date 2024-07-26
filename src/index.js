@@ -89,20 +89,17 @@ function renderCard(cardData, wrapper) {
 //closeModal(profileEditModal);
 //}
 
+profileEditBtn.addEventListener("click", () => {
+  profileTitleInput.value = profileTitle.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
+  editProfilePopup.open();
+});
+
 function handleProfileEditSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   editProfilePopup.close();
 }
-
-//function handleProfileAddSubmit(e) {
-//e.preventDefault();
-//const name = cardTitleInput.value;
-//const link = cardUrlInput.value;
-//renderCard({ name, link }, cardlistEl);
-//closeModal(profileAddModal);
-//e.target.reset();
-//}
 
 function handleProfileAddSubmit(e) {
   const name = cardTitleInput.value;
