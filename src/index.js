@@ -100,8 +100,7 @@ function handleProfileAddSubmit(e) {
   const alt = cardTitleInput.value;
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardlistEl);
-  profileAddModal.close();
-  addCardFormValidator.resetForm();
+  newCardPopup.close();
 }
 
 function handleEscClose(e) {
@@ -134,10 +133,6 @@ openModal(profileEditModal);
 
 addNewCardButton.addEventListener("click", () => {
   newCardPopup.open();
-});
-
-addNewCardButton.addEventListener("click", () => {
-  newCardPopup.close();
 });
 
 //close modal
