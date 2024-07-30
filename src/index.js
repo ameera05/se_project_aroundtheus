@@ -122,7 +122,7 @@ profileEditBtn.addEventListener("click", () => {
 });
 
 //profileEditForm.addEventListener("submit", handleProfileEditSubmit);
-addCardFormElement.addEventListener("submit", handleProfileAddSubmit);
+//addCardFormElement.addEventListener("submit", handleProfileAddSubmit);
 //profileEditBtn.addEventListener("click", () => {
 profileTitleInput.value = profileTitle.textContent;
 profileDescriptionInput.value = profileDescription.textContent;
@@ -134,6 +134,10 @@ openModal(profileEditModal);
 
 addNewCardButton.addEventListener("click", () => {
   newCardPopup.open();
+});
+
+addNewCardButton.addEventListener("click", () => {
+  newCardPopup.close();
 });
 
 //close modal
@@ -153,6 +157,9 @@ addCardFormValidator.enableValidation();
 const profileFormValidator = new FormValidator(config, profileEditForm);
 profileFormValidator.enableValidation();
 
+/* -------------------------------------------------------------------------- */
+/*                               Pop Ups                                      */
+/* -------------------------------------------------------------------------- */
 //add card popup
 const newCardPopup = new PopupWithForm(
   "#profile-add-modal",
