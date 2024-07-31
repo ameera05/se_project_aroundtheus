@@ -51,16 +51,6 @@ const previewImageLabel = document.querySelector(".modal__image-label");
 /*                                  Functions                                 */
 /* -------------------------------------------------------------------------- */
 
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", handleEscClose);
-}
-
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-  document.addEventListener("keydown", handleEscClose);
-}
-
 function handleImageClick(cardData) {
   openModal(previewImageModal);
   previewImageElement.src = cardData.link;
@@ -82,12 +72,6 @@ function renderCard(cardData, wrapper) {
 /* -------------------------------------------------------------------------- */
 /*                               Event Handlers                               */
 /* -------------------------------------------------------------------------- */
-//old code
-//function handleProfileEditSubmit(e) {
-//profileTitle.textContent = profileTitleInput.value;
-//profileDescription.textContent = profileDescriptionInput.value;
-//closeModal(profileEditModal);
-//}
 
 function handleProfileEditSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
@@ -120,16 +104,7 @@ profileEditBtn.addEventListener("click", () => {
   editProfilePopup.open();
 });
 
-//profileEditForm.addEventListener("submit", handleProfileEditSubmit);
-//addCardFormElement.addEventListener("submit", handleProfileAddSubmit);
-//profileEditBtn.addEventListener("click", () => {
-profileTitleInput.value = profileTitle.textContent;
-profileDescriptionInput.value = profileDescription.textContent;
-openModal(profileEditModal);
-//});
-
 // add new card button
-//addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
 
 addNewCardButton.addEventListener("click", () => {
   newCardPopup.open();
