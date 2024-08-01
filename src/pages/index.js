@@ -1,12 +1,12 @@
-import "./pages/index.css";
-import { initialCards, config } from "../src/utils/constants.js";
-import Card from "../src/components/Card.js";
-import FormValidator from "../src/components/FormValidator.js";
-import Popup from "../src/components/Popup.js";
-import PopupWithForm from "../src/components/PopupWithForm.js";
-import PopupWithImage from "../src/components/PopupWithImage.js";
-import Section from "../src/components/Section.js";
-import UserInfo from "../src/components/UserInfo.js";
+import "../pages/index.css";
+import { initialCards, config } from "../utils/constants.js";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
+import Popup from "../components/Popup.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import Section from "../components/Section.js";
+import UserInfo from "../components/UserInfo.js";
 
 /* -------------------------------------------------------------------------- */
 /*                                  Elements                                  */
@@ -82,7 +82,7 @@ function handleProfileEditSubmit(e) {
 
 function handleProfileAddSubmit(e) {
   section.addItem(createCard(e));
-  newCardPopup.close;
+  newCardPopup.close();
 }
 
 function handleEscClose(e) {
