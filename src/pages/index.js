@@ -76,7 +76,7 @@ function createCard(cardData) {
 /* -------------------------------------------------------------------------- */
 
 function handleProfileEditSubmit(e) {
-  user.setUserInfo(e);
+  user.setUserInfo({ name: e.title, description: e.description });
   editProfilePopup.close();
 }
 
