@@ -7,7 +7,7 @@ import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
-import Api from "./Api.js";
+import Api from "../components/Api.js";
 
 /* -------------------------------------------------------------------------- */
 /*                                  Elements                                  */
@@ -19,15 +19,6 @@ const api = new Api({
     authorization: "d6b6e546-f538-467e-af58-784d7d51e987",
   },
 });
-
-api
-  .getInitialCards()
-  .then((cards) => {
-    console.log(cards);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
 
 //templates
 const cardlistEl = document.querySelector(".cards__list");
@@ -192,9 +183,8 @@ const section = new Section(
 api
   .getInitialCards()
   .then((cards) => {
-    cards.forEach((card) => {
-      section.addItem(createCard(card));
-    });
+    section._item = cards;
+    section.renderItems();
   })
   .catch((err) => {
     console.error(err);
