@@ -1,5 +1,5 @@
 import "../pages/index.css";
-import { initialCards, config } from "../utils/constants.js";
+import { config } from "../utils/constants.js";
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import Popup from "../components/Popup.js";
@@ -7,10 +7,18 @@ import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
+import Api from "../components/Api.js";
 
 /* -------------------------------------------------------------------------- */
 /*                                  Elements                                  */
 /* -------------------------------------------------------------------------- */
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "d6b6e546-f538-467e-af58-784d7d51e987",
+  },
+});
 
 //templates
 const cardlistEl = document.querySelector(".cards__list");
@@ -66,23 +74,47 @@ function handleImageClick(cardData) {
 }
 
 function createCard(cardData) {
-  const card = new Card(cardData, "#card-template", handleImageClick);
-  const cardElement = card.getView();
-  return cardElement;
+  const card = new Card(cardData, "#card-template", handleImageClick, api);
+  return card.getView();
 }
 
 /* -------------------------------------------------------------------------- */
 /*                               Event Handlers                               */
 /* -------------------------------------------------------------------------- */
 
-function handleProfileEditSubmit(e) {
-  user.setUserInfo({ name: e.title, description: e.description });
-  editProfilePopup.close();
+function handleProfileEditSubmit(data) {
+  api
+    .updateUserInfo({
+      name: data.title,
+      about: data.description,
+    })
+    .then((updatedUser) => {
+      user.setUserInfo({
+        name: updatedUser.name,
+        description: updatedUser.about,
+        avatar: updatedUser.avatar,
+        _id: updatedUser._id,
+      });
+      editProfilePopup.close();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
-function handleProfileAddSubmit(e) {
-  section.addItem(createCard(e));
-  newCardPopup.close();
+function handleProfileAddSubmit(data) {
+  api
+    .addCard({
+      name: data.title,
+      link: data.url,
+    })
+    .then((newCard) => {
+      section.addItem(createCard(newCard));
+      newCardPopup.close();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
 function handleEscClose(e) {
@@ -137,22 +169,45 @@ const previewImagePopup = new PopupWithImage("#preview-image-modal");
 previewImagePopup.setEventListeners();
 
 //Section
+
 const section = new Section(
   {
-    item: initialCards,
+    item: [],
     renderer: (item) => {
       section.addItem(createCard(item));
     },
   },
   cardlistEl
 );
-section.renderItems();
+
+api
+  .getInitialCards()
+  .then((cards) => {
+    section.renderItems(cards);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 //Userinfo
 const user = new UserInfo({
   name: ".profile__title",
   description: ".profile__description",
 });
+
+api
+  .getUserInfo()
+  .then((userData) => {
+    user.setUserInfo({
+      name: userData.name,
+      description: userData.about,
+      avatar: userData.avatar,
+      _id: userData._id,
+    });
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 export function multiply(a, b) {
   return a * b;
