@@ -183,8 +183,7 @@ const section = new Section(
 api
   .getInitialCards()
   .then((cards) => {
-    section._item = cards;
-    section.renderItems();
+    section.renderItems(cards);
   })
   .catch((err) => {
     console.error(err);
